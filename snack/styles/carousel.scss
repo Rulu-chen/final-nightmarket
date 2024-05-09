@@ -1,0 +1,584 @@
+// 全站配色 colors
+// 引入變數使用
+@import 'variable';
+
+// React Slick的階層解析
+
+// ====[優惠訊息]====
+//最外層
+.slider-container.discount-index-gruop {
+  @media (max-width: 992px) {
+    width: initial;
+    height: initial;
+    padding: 0;
+    border-radius: 20px 20px 0px 0px;
+  }
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  overflow: hidden;
+  border-radius: 50px 50px 0px 0px;
+  //包住方向鍵和內容的階層
+  .slick-slider.slick-initialized {
+    @media (max-width: 992px) {
+      transform: initial;
+      width: initial;
+      padding: 30px 0px 70px 0px;
+    }
+    padding: 160px 0px;
+    width: 2500px;
+    transform: translate(-14%, 0%) rotate(-30deg);
+    // background: #d2ddbf;
+    // 不顯示箭頭
+    .slick-arrow {
+      display: none !important;
+    }
+    // 內容 ( 實際呈現的範圍 )
+    .slick-list {
+      // background-color: #fff;
+      overflow: visible;
+      // @media (max-width: 992px) {
+      //   width: calc(100% - 20px);
+      // }
+
+      .slick-track {
+        //(全部圖片串接起來的部分 )
+        // background-color: #8c3dac;
+        display: flex;
+
+        .slick-slide.slick-center .slide-item {
+          @media (max-width: 992px) {
+            padding-top: 0px;
+            padding-bottom: 0px;
+          }
+        }
+        .slick-slide {
+          @media (max-width: 992px) {
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-left: 20px;
+            margin-right: 20px;
+          }
+          // background-color: aqua;
+          // 一組的內容的外層
+          padding-right: 60px;
+          padding-left: 60px;
+
+          a:focus,
+          a:active {
+            @media (max-width: 992px) {
+              outline: none;
+            }
+            outline: none;
+            box-shadow: none;
+            border: none;
+          }
+          .slide-item {
+            @media (max-width: 992px) {
+              padding-top: 5px;
+              padding-bottom: 5px;
+              transform: initial;
+              height: 120px;
+              width: 145px;
+              border-radius: 20px;
+            }
+            // background-color: #ad5252;
+            // 我們在組件中開始能調整的容器
+            transform: rotate(30deg);
+            display: flex !important;
+            height: 420px;
+            width: 600px;
+            border-radius: 80px;
+            position: relative;
+            // 從圖片開始設定圖片與文字
+            .discount-img {
+              @media (max-width: 992px) {
+                border-radius: 20px;
+              }
+              border-radius: 80px;
+              width: 100%;
+              height: 100%;
+            }
+            .discount-text {
+              @media (max-width: 992px) {
+                left: 15px;
+                bottom: 10px;
+                text-shadow: 0px 0px 10px $black;
+              }
+              color: #fff;
+              position: absolute;
+              font-weight: 700;
+              left: 30px;
+              bottom: 30px;
+              text-shadow: 0px 0px 15px $black;
+            }
+            .discount-store {
+              @media (max-width: 992px) {
+                font-size: 12px;
+                bottom: 35px;
+                font-weight: 600;
+              }
+              font-size: 28px;
+              bottom: 85px;
+            }
+            .discount-name {
+              @media (max-width: 992px) {
+                font-size: 18px;
+                font-weight: 600;
+              }
+              font-size: 40px;
+            }
+          } //.slide-item
+        } // .slick-slide
+      } //.slick-track
+    } // .slick-list
+  } // ..slick-slider.slick-initialized
+} //最外層
+
+// ====[店家]====
+// 最外層
+.slider-container.store-index-gruop {
+  @media (max-width: 992px) {
+    padding: 20px 0px 20px 0px;
+  }
+  padding: 50px 0px 20px 0px;
+  //包住方向鍵和內容的階層
+  .slick-slider.slick-initialized {
+    position: relative;
+    // 方向鍵階層
+    .custom-prev-arrow {
+      @media (max-width: 992px) {
+        display: none;
+      }
+      position: absolute;
+      top: 0;
+      margin-top: 150px;
+      left: -70px;
+      padding: 10px;
+    }
+    .custom-next-arrow {
+      @media (max-width: 992px) {
+        display: none;
+      }
+      position: absolute;
+      margin-top: 150px;
+      top: 0;
+      right: -70px;
+      padding: 10px;
+    }
+    .slick-arrow {
+      @media (max-width: 992px) {
+        display: none !important;
+      }
+    }
+    .custom-next-arrow:hover,
+    .custom-prev-arrow:hover {
+      background-color: rgba(199, 186, 159, 0.5);
+      border-radius: 10px;
+      cursor: pointer;
+      color: $primary;
+    }
+
+    // 內容 ( 實際呈現的範圍 )
+    .slick-list {
+      // background-color: #fff;
+      .slick-track {
+        //(全部圖片串接起來的部分 )
+        @media (max-width: 992px) {
+          gap: 0px;
+          align-items: center;
+        }
+        display: flex;
+        gap: 40px;
+
+        // 調整小版的中心
+        .slick-slide.slick-center .card-store-index {
+          @media (max-width: 992px) {
+            width: 145px !important;
+            height: 200px;
+          }
+        }
+        .slick-slide {
+          // background-color: aqua;
+          // 一組的內容的外層
+          @media (max-width: 992px) {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+          .card-store-index {
+            background-color: #ad5252;
+            display: flex !important;
+            // 我們在組件中開始能調整的容器
+            @media (max-width: 992px) {
+              width: calc(145px * 0.9) !important;
+              height: calc(200px * 0.9);
+            }
+            background-color: #3d3d3d;
+            height: 480px;
+            width: 370px !important;
+            padding: 60px 10px 20px 10px;
+            border-radius: 200px 200px 0px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+
+            .store-name {
+              @media (max-width: 992px) {
+                font-size: 14px;
+              }
+              color: $primary;
+              font-size: 34px;
+              font-weight: 700;
+              text-shadow: 0px 0px 20px #fff, 0px 0px 20px #fff,
+                0px 0px 20px #fff;
+              position: absolute;
+              top: 40%;
+            }
+            .store-market {
+              @media (max-width: 992px) {
+                font-size: 12px;
+                padding-bottom: 20px;
+              }
+              color: $primary;
+              font-size: 28px;
+              font-weight: 700;
+              text-shadow: 0px 0px 20px #fff, 0px 0px 20px #fff,
+                0px 0px 20px #fff;
+              // padding-bottom: 35px;
+              position: absolute;
+            }
+            .btn {
+              @media (max-width: 992px) {
+                font-size: 10px;
+                padding: 4px 12px;
+              }
+              position: absolute;
+              top: 65%;
+            }
+            .store-img {
+              opacity: 0.8;
+              object-fit: cover;
+            }
+          } //.card-store-index
+        } // .slick-slide
+      } //.slick-track
+    } // .slick-list
+  }
+}
+
+// ====[商品]====
+
+// 處理商品
+.section-index.index-nop.index-product {
+  position: relative;
+  overflow: visible;
+img{
+}
+}
+
+// 輪播
+//最外層
+.slider-container.product-index-gruop {
+  @media (max-width: 992px) {
+    padding: 60px 0px 50px 0px;
+    overflow: hidden;
+  }
+  padding: 20px 0px;
+  //包住方向鍵和內容的階層
+  .slick-slider.slick-initialized {
+    position: relative;
+    // 方向鍵階層
+    .custom-prev-arrow {
+      @media (max-width: 992px) {
+        display: none;
+      }
+      position: absolute;
+      top: 0;
+      margin-top: 150px;
+      left: -70px;
+      padding: 10px;
+    }
+    .custom-next-arrow {
+      @media (max-width: 992px) {
+        display: none;
+      }
+      position: absolute;
+      margin-top: 150px;
+      top: 0;
+      right: -70px;
+      padding: 10px;
+    }
+    .custom-next-arrow:hover,
+    .custom-prev-arrow:hover {
+      background-color: rgba(199, 186, 159, 0.5);
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .slick-arrow {
+      @media (max-width: 992px) {
+        display: none !important;
+      }
+    }
+
+    // 內容 ( 實際呈現的範圍 )
+    .slick-list {
+      @media (max-width: 992px) {
+        overflow: visible;
+      }
+      // background-color: #fff;
+      .slick-track {
+        //(全部圖片串接起來的部分 )
+        @media (max-width: 992px) {
+          gap: 0px;
+        }
+        display: flex;
+        gap: 20px;
+        .slick-slide {
+          // background-color: aqua;
+          // 一組的內容的外層
+          @media (max-width: 992px) {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+
+          .card-product-index {
+            // background-color: #ad5252;
+            display: flex !important;
+            // 我們在組件中開始能調整的容器
+            @media (max-width: 992px) {
+              width: 150px;
+              height: 200px;
+              padding: 0;
+              gap: 12px;
+            }
+            width: 100%;
+            align-self: stretch;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            gap: 20px;
+            .product-top {
+              @media (max-width: 992px) {
+                background-color: rgba(255, 255, 255, 0.5);
+                padding: 8px 8px 20px 8px;
+              }
+              width: 100%;
+            }
+            .product-title {
+              @media (max-width: 992px) {
+                gap: 4px;
+                margin-bottom: 4px;
+              }
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              align-items: start;
+            }
+            .product-name {
+              @media (max-width: 992px) {
+                padding: 2px 20px 2px 8px;
+                font-size: 10px;
+                font-weight: 500;
+              }
+              background-color: $primary;
+              font-size: 16px;
+              color: #fff;
+              font-weight: 500;
+              padding: 4px 38px 4px 12px;
+            }
+            .product-img {
+              @media (max-width: 992px) {
+                height: 100px;
+                width: 100px;
+              }
+              height: 350px;
+              width: 350px;
+              border-radius: 500px;
+              background-color: #bababa;
+              margin: auto;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: relative;
+              overflow: hidden;
+              .btn.btn-light {
+                @media (max-width: 992px) {
+                  font-size: 10px;
+                  padding: 4px 12px;
+                }
+                position: absolute;
+                display: none;
+              }
+              .product {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+              }
+            }
+            :hover {
+              .btn.btn-light {
+                display: block;
+              }
+            }
+            .product-text {
+              @media (max-width: 992px) {
+                font-size: 12px;
+                flex-direction: column;
+                align-items: start;
+                padding: 0px;
+              }
+              display: flex;
+              flex-direction: row;
+              font-size: 16px;
+              font-weight: 500;
+              width: 100%;
+              align-items: center;
+              justify-content: space-between;
+              padding: 0px 20px;
+              .btn.btn-primary {
+                @media (max-width: 992px) {
+                  padding: 6px 7px 5px 5px;
+                }
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+              }
+              .cart-text {
+                @media (max-width: 992px) {
+                  display: none;
+                }
+                padding-right: 5px;
+              }
+              .fa-cart {
+                @media (max-width: 992px) {
+                  font-size: 15px;
+                }
+                font-size: 20px;
+              }
+              .butinput {
+                @media (max-width: 992px) {
+                  width: 100%;
+                  gap: 0;
+                  align-items: center;
+                  justify-content: space-between;
+                }
+                display: flex;
+                flex-direction: row;
+                gap: 30px;
+              }
+              .price {
+                @media (max-width: 992px) {
+                  font-size: 18px;
+                  font-weight: 500;
+                }
+                font-size: 30px;
+                color: $primary;
+                font-weight: 500;
+              }
+              .quantity {
+                display: flex;
+                flex-direction: row;
+                gap: 1px;
+                button {
+                  @media (max-width: 992px) {
+                    height: 30px;
+                    width: 30px;
+                  }
+                  height: 37px;
+                  width: 37px;
+                  border: none;
+                  background-color: #fff;
+                  color: $primary;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                }
+                input {
+                  @media (max-width: 992px) {
+                    height: 30px;
+                    width: 50px;
+                  }
+                  height: 37px;
+                  width: 50px;
+                  font-size: 16px;
+                  font-weight: 500;
+                  color: $primary;
+                  border: none;
+                  text-align: center;
+                  background-color: #fff;
+                }
+                :focus {
+                  border: none;
+                }
+              }
+            }
+          } //.card-store-index
+        } // .slick-slide
+      } //.slick-track
+    } // .slick-list
+  } // ..slick-slider.slick-initialized
+} //最外層
+
+// 階層範本
+// //最外層
+// .slider-container.store-index-gruop {
+//   padding: 20px 0px;
+//   //包住方向鍵和內容的階層
+//   .slick-slider.slick-initialized {
+//     position: relative;
+//     // 方向鍵階層
+//     .custom-prev-arrow {
+//       @media (max-width: 992px) {
+//         display: none;
+//       }
+//       position: absolute;
+//       top: 0;
+//       margin-top: 60px;
+//       left: -70px;
+//       padding: 10px;
+//     }
+//     .custom-next-arrow {
+//       @media (max-width: 992px) {
+//         display: none;
+//       }
+//       position: absolute;
+//       margin-top: 60px;
+//       top: 0;
+//       right: -70px;
+//       padding: 10px;
+//     }
+//     .custom-next-arrow:hover,
+//     .custom-prev-arrow:hover {
+//       background-color: rgba(199, 186, 159, 0.5);
+//       cursor: pointer;
+//       color: $primary;
+//     }
+
+//     // 內容 ( 實際呈現的範圍 )
+//     .slick-list {
+//       background-color: #fff;
+//       .slick-track {
+//         //(全部圖片串接起來的部分 )
+//         display: flex;
+//         gap: 20px;
+//         .slick-slide {
+//           background-color: aqua;
+//           // 一組的內容的外層
+
+//           .card-store-index {
+//             background-color: #ad5252;
+//             display: flex !important;
+//             // 我們在組件中開始能調整的容器
+//             @media (max-width: 992px) {
+//             }
+//           } //.card-store-index
+//         } // .slick-slide
+//       } //.slick-track
+//     } // .slick-list
+//   } // ..slick-slider.slick-initialized
+// } //最外層

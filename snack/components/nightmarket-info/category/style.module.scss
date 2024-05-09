@@ -1,0 +1,38 @@
+.card {
+  width: 180px;
+  margin: 10px;
+  cursor: pointer;
+  @media (max-width: 576px) {
+    width: 155px;
+  }
+
+  .imageContainer {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 4px;
+    background-color: #e5e1dd;
+    border-radius: 30px;
+    overflow: hidden;
+
+    .image {
+      width: 280px;
+      position: relative;
+      @media (max-width: 576px) {
+        width: 260px;
+      }
+    }
+  }
+
+  .title {
+    text-align: center;
+    margin: 0;
+  }
+}
+
+
+
+// @media (max-width: 576px) {
+//   .card {
+//     width: 300px;
+//   }
+// }

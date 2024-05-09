@@ -1,0 +1,623 @@
+/* styles/navbar-seller.module.scss */
+@use 'sass:color';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+// 基本颜色
+$sidebar-background: #f4e9e2;
+$border-color: #de4f4f;
+$text-color: #333;
+$hover-bg-color: color.scale($sidebar-background, $lightness: -10%);
+$primary-red: #ff0000; // 用你的紅色代碼替換
+$background-light-red: #ffecec; // 用較淺的紅色代碼替換
+$border-red: #ff0000; // 用邊框的紅色代碼
+
+
+
+// 响应式断点
+$mobile-width: 480px;
+.formWrapper {
+  background-color: #fff; // 白色背景
+  border: 1px solid #ccc; // 灰色框線
+  padding: 1rem; // 添加內邊距
+  border-radius: 8px; // 圓角
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // 添加陰影
+  
+}
+
+
+.formCard {
+  border: 1px solid red; // 外層紅色框線
+  padding: 1rem; // 根據需要添加間距
+  position: relative;
+  
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: -1rem; // 根據需要調整位置
+    right: -1rem; // 根據需要調整位置
+    background-color: rgba(255, 0, 0, 0.1); // 透明紅色背景
+    width: calc(100% + 2rem); // 背景寬度大於容器寬度
+    height: calc(100% + 2rem); // 背景高度大於容器高度
+    z-index: -1; // 保證在容器後面
+  }
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #dedede;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  
+}
+// 按钮组样式
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.btnPrimary {
+  background-color: $primary-red; // 範例紅色，根據設計調整
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px; // 根據設計調整半徑
+  cursor: pointer;
+  font-weight: bold; // 假設按鈕根據設計是粗體
+  margin-right: 10px; // 按鈕之間的間距
+  text-transform: uppercase; // 如果文字應該是大寫
+  &:hover {
+    background-color: darken(#de4f4f, 10%); // 悬停时更深的颜色
+  }
+}
+
+.btnSecondary {
+  background-color: $sidebar-background; // 淺灰色，根據設計調整
+  color: $text-color; // 次要按鈕的深色文字
+  border: 1px solid #dedede; // 設計中的邊框
+  padding: 10px 20px;
+  border-radius: 30px; // 根據設計調整半徑
+  cursor: pointer;
+  font-weight: bold; // 假設按鈕根據設計是粗體
+  margin-left: 10px; // 按鈕之間的間距
+  &:hover {
+    background-color: #e6e6e6; // 悬停时略微变暗
+  }
+}
+
+// 下拉框样式调整
+.customSelect {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: .375rem 2.25rem .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #333;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+}
+
+// 下拉菜单和标签的容器样式，用于分组
+.selectGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+// 标签样式，用于致中
+.selectLabel {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+// 修正文本框和下拉框的外观
+.formControl, .form-select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+
+.sellerSidebarWrapper {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  padding: 16px;
+  padding-top: 50px; // 預留出頭像的空間
+  border: 2px solid transparent; // 设置边框为透明
+  border-radius: 8px;
+  background-color: transparent; // 设置背景为透明
+  margin-bottom: 20px;
+  position: relative;
+  box-shadow: none;
+  
+}
+.profileContainer {
+  display: flex; // 使用flex布局
+  flex-direction: column; // 子元素縱向排列
+  align-items: center; // 子元素在橫軸上居中
+  margin-top: 20px; // 保持與頁面頂部一定的距離
+  
+}
+.profileWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: transparent;
+  margin-bottom: 10px; // 使頭像上移與導航連結對齊
+}
+
+.profilePicture {
+  width: 100px; // 可根据需要调整大小
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-bottom: 1rem;
+}
+  .formTitle {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .navLink {
+    display: block;
+    padding: 10px 15px;
+    margin: 5px 0;
+    background-color: $sidebar-background;
+    color: $text-color;
+    text-decoration: none;
+    border-radius: 5px;
+  
+    &:hover {
+      background-color: #de4f4f;
+      color: #fff;
+    }
+  }
+
+  .ul {
+    padding-left: 0; // 移除默認的內邊距
+    width: 100%; // 让ul填满sellerSidebarWrapper
+    padding: 0;
+    margin: 0;
+  }
+
+.formWrapper {
+  border: 2px solid #de4f4f; // Red border around the form
+  background-color: #fff; // White background for the form
+  border-radius: 8px; // Rounded corners
+  padding: 20px; // Padding inside the form
+  margin-top: 20px; // Space above the form
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Shadow for depth
+}
+
+
+
+// 移动设备的导航栏样式
+.sellerSidebarWrapper {
+  border: 2px solid $border-color;
+  border-radius: 8px;
+  background-color: $sidebar-background;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.profileWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; // 根據需要設定
+  margin: auto; // 適用於上下邊距
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 响应式布局调整
+@media (max-width: $mobile-width) {
+  .profileContainer,
+  .sellerSidebarWrapper,
+  .formCard {
+    width: 100%; // 使元素宽度与屏幕宽度相同
+    margin: 0; // 移除外边距确保元素能够对齐
+    box-shadow: none; // 移除阴影使布局更简洁
+  }
+
+  .profilePicture {
+    display: block; // 确保图片在块级元素中显示
+    margin: 0 auto; // 图片居中
+    width: 80px; // 设置一个合适的图片尺寸
+    height: 80px;
+    border-radius: 50%; // 使图片呈现圆形
+  }
+  ul.list-unstyled {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: -15px; // 对齐到父容器边缘
+    margin-right: -15px;
+  }
+  .navLink {
+    width: calc(100% + 30px); // 填满父容器并考虑负边距
+    margin-left: -15px; // 调整以填满左右空间
+    margin-right: -15px;
+    padding-left: 15px; // 保持原始内边距
+    padding-right: 15px;
+    text-decoration: none;
+  }
+
+  // 表单包裹器内元素样式调整
+  .formWrapper {
+    padding: 1rem; // 增加内边距
+
+    .form-control,
+    .form-select,
+    .form-label {
+      width: 100%; // 输入框和选择框宽度与屏幕宽度相同
+      margin: 10px 0; // 增加垂直间距
+    }
+
+    // 按钮组样式调整
+    .buttonGroup {
+      flex-direction: column; // 按钮垂直排列
+    }
+
+    .btnPrimary,
+    .btnSecondary {
+      width: 100%; // 按钮宽度与屏幕宽度相同
+      margin: 0 0 10px 0; // 调整按钮之间的间距
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+//表格
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0 1rem; // 根据设计图调整行间距
+  width: 100%;
+  margin: 1rem 0; // 表格上下的间距
+
+  thead {
+    th {
+      background-color: $sidebar-background;
+      color: black; // 将表头字体颜色设置为黑色
+      border: 1px solid $primary-red;
+      text-align: center;
+      padding: 0.75rem;
+      border-radius: 0.5rem; // 设计图中为圆角
+      &:first-child {
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+      }
+      &:last-child {
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+     background-color:$sidebar-background;
+     color: black; // 将表头字体颜色设置为黑色
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // 给予行阴影以提升层次感
+      transition: transform 0.1s ease-in-out; // 点击行时的交互效果
+
+      &:hover {
+        transform: scale(1.02); // 鼠标悬浮时微微放大
+      }
+
+      td {
+        border: 1px solid $primary-red;
+        text-align: center;
+        padding: 0.75rem;
+        color: #333; // 设计图中字体颜色为深色
+
+        // &:first-child {
+        //   border-left: none; // 移除最左侧边框
+        // }
+        // &:last-child {
+        //   border-right: none; // 移除最右侧边框
+        // }
+      }
+      // 为第一列的 td 添加左边框的圆角
+      td:first-child {
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+      }
+      // 为最后一列的 td 添加右边框的圆角
+      td:last-child {
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+      }
+      
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 搜索和篩選輸入框樣式
+.form-control {
+  
+  border: 1px solid $border-red;
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba($primary-red, .25);
+  }
+}
+
+// 按鈕樣式
+.btnoutline {
+  color: $primary-red;
+  border-color: $primary-red;
+  border-radius: 20%;
+  width: 50px;
+  height: 50px;
+
+  &:hover {
+    color: #fff;
+    background-color: $primary-red;
+    border-color: $primary-red;
+  }
+}
+
+// 搜索按鈕旁邊的清除按鈕
+.bi-x-lg {
+  color: $primary-red;
+  &:hover {
+    color: #fff;
+  }
+}
+
+// QRcode
+.qrCodeDisplay {
+  border: 2px solid $border-color; // 紅色邊框
+  border-radius: 8px; // 圓角
+  padding: 20px; // 內邊距
+  margin-top: 20px; // 上邊距
+  background-color: #ffffff; // 白色背景
+  color: #000000; // 黑色文字
+}
+
+
+/* 样式文件 (styles/navbar-seller.module.scss 或其他相关的样式文件) */
+.adCard {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.adCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.adCardActive {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 您可以根据设计图调整按钮样式 */
+.btn-primary.active {
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+
+/* 图片样式调整 */
+.card-img-top {
+  height: 120px; /* 根据需要调整高度 */
+  object-fit: cover; /* 确保图片铺满卡片顶部 */
+}
+
+.adCardActive {
+  border: 2px solid $border-color; // Bootstrap 主要蓝色
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.img-preview {
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+.preview-container {
+  margin-bottom: 20px;
+}
+
+// /* 模态框居中显示的样式 */
+// .modal {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+//   z-index: 1050; /* 确保在最上层 */
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: opacity 0.3s ease, visibility 0.3s ease;
+// }
+
+// .modal.show {
+//   opacity: 1;
+//   visibility: visible;
+// }
+
+// .modal-dialog {
+//   transform: translateY(-50px); /* 初始状态稍微向上 */
+//   transition: transform 0.3s ease-out;
+// }
+
+// .modal.show .modal-dialog {
+//   transform: translateY(0); /* 过渡到原位置 */
+// }
+//  眼睛
+.input-wrapper {
+  position: relative;
+}
+
+.icon-toggle {
+  position: absolute;
+  color: $border-red;
+  top: 50%;  
+  right: 16px;  /* 根据具体的设计调整 */
+  transform: translateY(50%);
+  font-size: 24px;  /* 或者根据需要调整大小 */
+}
+
+
+
+// 動畫
+.loadingContainer {
+  position: absolute;
+  right: 35%;
+  top: 40%;
+  padding-right: 50px; 
+  padding-top: 50px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; 
+  
+  width: 100px;
+}
+
+.loadingContainer1 {
+  position: absolute;
+  right: 40%;
+  top: 50%;
+  padding-right: 50px; 
+  padding-top: 50px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; 
+  width: 100px;
+}
+.selectedRow {
+  background-color: #f8d7da; /* 调整为你希望的颜色 */
+}
+
+
+
+
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.modalContent {
+  width: 70%;  /* 控制 Modal 的寬度為屏幕寬度的 70% */
+  max-height: 70%; /* 控制 Modal 的最大高度為屏幕高度的 70% */
+  background: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;  /* 水平居中 */
+  align-items: center;  /* 垂直居中 */
+  overflow: auto;  /* 允許滾動 */
+  padding: 20px;
+}
+
+.modalContent img {
+  max-width: 100%;  /* 圖片最大寬度限制為容器寬度的 100% */
+  height: auto;  /* 高度自動 */
+}

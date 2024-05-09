@@ -1,0 +1,1245 @@
+/* product */
+
+/* 最外層容器 */
+.outerFrame{
+    width: calc( 100% - 80px );
+    height: auto;
+    background-color:rgba(255, 255, 255,0.5);
+    border-radius: 20px; 
+}
+@media (max-width: 576px) {
+    .outerFrame{
+        width: 100%;
+        background-color:rgba(246, 242, 219, 0);
+    }
+  }
+/* '結帳頁面'標題 */
+.orderTitle{
+    text-align: center;
+    margin-top: 50px;
+    color:rgb(102, 50, 4);
+    font-weight: bold;
+    font-size: 40px;
+}
+@media (max-width: 576px) {
+    .orderTitle{
+       font-size: 18px;
+      margin-top: 16px;
+    }
+  }
+
+.stepBorder{
+    margin-top: 30px;
+    margin-left: 70px;
+    width:calc( 100% - 150px );
+    height: 288px;
+    border: solid 3px rgb(163, 44, 45);
+    border-radius: 20px;
+}
+@media (max-width: 576px) {
+    .stepBorder{
+       width: 299px;
+       height: 113px;
+       margin-top: 16px;
+       margin-left: 10px;
+       background-color: rgba(255, 255, 255,0.5);
+    }
+  }
+
+.container{
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+/* 步驟:紅底白字圓圈 */
+.step1{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(163, 44, 45);
+    color:white;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 3px;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 40px;
+    position: relative;
+    z-index: 1;
+    margin: -5px;
+    margin-top: 70px;
+    margin-left: 303px;
+}
+@media (max-width: 576px) {
+    .step1{
+       width: 40px;
+       height: 40px;
+       margin-top: 20px;
+       margin-left: 35px;
+       padding-top: 1px;
+      font-size: 16px;
+    }
+  }
+
+  .step2{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(163, 44, 45);
+    color:white;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 3px;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 40px;
+    position: relative;
+    z-index: 1;
+    margin: -5px;
+}
+@media (max-width: 576px) {
+    .step2{
+       width: 40px;
+       height: 40px;
+       margin-top: 20px;
+       padding-top: 1px;
+      font-size: 16px;
+    }
+  }
+
+
+
+/* 連接線:灰 */
+.connectGrey{
+    display: inline-block;
+    vertical-align: middle;
+    width: 290px;
+    height: 15px;
+    background-color: #B1B7B5;
+    z-index: 2;
+    margin:-5px;
+}
+@media (max-width: 576px) {
+    .connectGrey{
+       width: 60px;
+       height: 6px;
+       margin-left: -5px;
+    }
+  }
+
+.connectRed{
+    display: inline-block;
+    vertical-align: middle;
+    width: 290px;
+    height: 15px;
+    background-color: rgb(163, 44, 45);
+    z-index: 2;
+    margin:-5px; 
+}
+@media (max-width: 576px) {
+    .connectRed{
+       width: 60px;
+       height: 6px;
+    }
+  }
+
+
+.step1Text{
+    color:rgb(163, 44, 45);
+    font-weight: bold;
+    font-size: 28px;
+    margin-top: 40px;
+    margin-left: 345px;
+}
+@media (max-width: 576px) {
+    .step1Text{
+       font-size: 16px;
+       margin-top: -5px;
+       margin-left: 35px;
+    }
+  }
+
+
+
+/* 步驟:灰底白字圓圈 */
+.stepUndo{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #B1B7B5;
+    color:white;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 3px;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 40px;
+    position: relative;
+    z-index: 1;
+    margin: -5px;
+}
+@media (max-width: 576px) {
+    .stepUndo{
+        width: 40px;
+       height: 40px;
+       padding-top: 1px;
+       font-size: 16px;
+    }
+  }
+
+.textContainer{
+    display: flex; 
+    flex-direction: row; 
+}
+
+.step2Text{
+    color:#A32C2D;
+    font-weight: bolder;
+    font-size: 28px;
+    margin-top: 40px;
+    margin-left: 200px;
+}
+@media (max-width: 576px) {
+    .step2Text{
+       font-size: 16px;
+       margin-left: 20px;
+       margin-top: -5px;
+    }
+  }
+
+.step2UndoText{
+    color:rgb(177, 175, 175);
+    font-weight: bolder;
+    font-size: 28px;
+    margin-top: 40px;
+    margin-left: 200px;
+}
+@media (max-width: 576px) {
+    .step2UndoText{
+       font-size: 16px;
+       margin-left: 20px;
+       margin-top: -5px;
+    }
+  }
+
+  .step3Text{
+    color:#A32C2D;
+    font-weight: bolder;
+    font-size: 28px;
+    margin-top: 40px;
+    margin-left: 225px;
+}
+@media (max-width: 576px) {
+    .step3Text{
+       font-size: 16px;
+       margin-left: 28px;
+       margin-top: -5px;
+    }
+  }
+
+  .step3UndoText{
+    color:rgb(177, 175, 175);
+    font-weight: bolder;
+    font-size: 28px;
+    margin-top: 40px;
+    margin-left: 225px;
+}
+@media (max-width: 576px) {
+    .step3UndoText{
+       font-size: 16px;
+       margin-left: 28px;
+       margin-top: -5px;
+    }
+  }
+
+/* 訂單詳細:紅色邊框 */
+.orderBorder{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 70px;
+    padding-bottom: 20px;
+    width: calc( 100% - 150px );
+    height: auto;
+    border: solid 3px rgb(163, 44, 45);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;   
+}
+@media (max-width: 576px) {
+    .orderBorder{
+       width:calc( 100% - 18px ); 
+       margin-left: -5px;
+       margin-top: -10px;
+       border: solid 3px rgba(0, 0, 0, 0);
+    }
+  }
+
+.paymentMethodBorder{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 70px;
+    margin-bottom: 10px;
+    padding-bottom: 40px;
+    width: calc( 100% - 150px );
+    height: auto;
+    border: solid 3px rgb(163, 44, 45);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;   
+}
+@media (max-width: 576px) {
+    .paymentMethodBorder{
+       width:calc( 100% - 18px ); 
+       margin-left: 5px;
+       margin-top: 50px;
+       background-color: rgba(255, 255, 255, 0.5);
+       border: none;
+      
+    }
+  }
+
+  .methodFlex{
+    display: flex;
+  }
+  @media (max-width: 576px) {
+    .methodFlex{
+   flex-direction: column;
+    }
+  }
+
+.order1Container{
+    margin-top: 50px;
+    margin-left: 50px;
+    width: calc( 100% - 100px );
+    height: auto;
+    background-color: #fff;
+}
+@media (max-width: 576px) {
+    .order1Container{
+       width: 315px ; 
+       margin-left: 8px;
+       
+    }
+  }
+
+.order2Container{
+    margin-top: 50px;
+    margin-left: 50px;
+    width: calc( 100% - 100px );
+    height: auto;
+}
+
+.order4Container{
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    width: calc( 100% - 100px );
+    height: auto;
+    background-color: #fff;
+    border: solid 5px #A32C2D;
+    border-radius: 10px;
+}
+
+.orderContainerAdd{
+    margin-left: 50px;
+    width: calc( 100% - 100px );
+    height: auto;
+    max-height: 160px;
+    background-color: #fff;
+    padding-bottom: 8px;
+}
+@media (max-width: 576px) {
+    .orderContainerAdd{
+       width: 299px ; 
+       height: 72px;
+    }
+  }
+
+  /* orderStep1:產品容器 */
+  .orderProductContainer{
+    margin-left: 50px;
+    width: calc( 100% - 100px );
+    height: auto;
+    max-height: 160px;
+    background-color: #fff;
+    padding-bottom: 8px;
+   
+  }
+  @media (max-width: 576px) {
+    .orderProductContainer{
+       width: 245px ; 
+       height: 183px;
+      margin-top: -40px;
+    }
+  }
+
+
+
+
+.marketCheckout{
+   display: flex;
+   align-items: center;
+}
+
+/* 訂單詳細:店家icon */
+.sellerIcon{
+    font-size: 40px;
+    margin-left: 10px;
+}
+@media (max-width: 576px) {
+    .sellerIcon{
+       font-size: 30px; 
+       margin-left: -35px;
+       margin-top: 20px;
+    }
+  }
+
+   /* oderStep1:店家名稱 */
+.checkoutMarket{
+    margin-left: 60px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 30px;
+}
+@media (max-width: 576px) {
+    .checkoutMarket{
+       font-size: 14px; ; 
+       margin-left: 20px;
+    }
+  }
+
+  /* oderStep1:產品名稱 */
+.checkoutProduct{
+    margin-left: 30px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 30px;
+}
+@media (max-width: 576px) {
+    .checkoutProduct{
+       font-size: 14px;
+       margin-left: 15px;
+       
+    }
+  }
+
+/* '選此店結帳'按鈕 */
+.checkoutButton{
+    margin-left: 550px;
+    margin-top: 10px;
+    width: 160px;
+    height: 38px;
+    padding-top: 8px;
+    color: rgb(163, 44, 45);
+    background-color: #fff;
+    border: solid 2px rgb(163, 44, 45);
+    border-radius: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+@media (max-width: 576px) {
+    .checkoutButton{
+       display: none;
+    }
+  }
+
+.checkoutDownIcon{
+    color: #A32C2D;
+    font-size: 34px;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+/* 訂單:商品元件外框 */
+.orderDetail{
+    display: flex;
+   align-items: center;
+   background-color: #fff;
+}
+.order2Detail{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+@media (max-width: 576px) {
+    .order2Detail{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 315px;
+        height: 252px;
+        background-color: #fff;
+        margin-left: -45px;
+        margin-top: 0px;
+    }
+  }
+
+.order1Picture{
+    margin-top: 25px;
+    border-radius: 10px;
+}
+@media (max-width: 576px) {
+    .order1Picture{
+        display: flex;
+       margin-left: -40px;
+     
+    }
+  }
+
+.order2Picture{
+    margin-top: 35px;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+@media (max-width: 576px) {
+    .order2Picture{
+        margin-top: 10px;
+        margin-left: -180px;
+    }
+  }
+
+.productText{
+    margin-top: 30px;
+    margin-bottom: 12px;
+    margin-left: 50px;
+    font-weight: bold;
+    font-size: 20px;
+}
+@media (max-width: 576px) {
+    .productText{
+        margin-top: -60px;
+        margin-left: 60px;
+       font-size: 14px;
+    }
+  }
+
+  .productPrice{
+    margin-top: 15px;
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  @media (max-width: 576px) {
+    .productPrice{
+      font-size: 20px;
+      margin-left: 20px;
+      margin-top: -50px;
+      font-weight: bolder;
+    }
+  }
+
+  .product2Price{
+    margin-top: 15px;
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  @media (max-width: 576px) {
+    .product2Price{
+      font-size: 20px;
+      margin-left: 190px;
+      margin-top: -25px;
+      font-weight: bolder;
+    }
+  }
+
+/* 數量增減:外框 */
+.numberButton{
+    display: flex;
+    margin-left: 600px;
+}
+@media (max-width: 576px) {
+    .numberButton{
+       margin-top: 50px;
+       margin-left: -240px;
+    }
+  }
+
+/* 數量增減按鈕 */
+.productNumber{
+    margin-top: 30px;
+    margin-left: 3px;
+    padding-top: 5px;
+    width: 37px;
+    height: 37px;
+    background-color: rgb(229, 226, 226);
+    text-align: center;
+    font-weight: bolder; 
+}
+@media (max-width: 576px) {
+    .productNumber{
+       font-size: 16px;
+       margin-top: 80px;
+       
+    }
+  }
+
+  /* '移除'按鈕 */
+.removeButton{
+    padding-top: 8px;
+    margin-left: 20px;
+    margin-top: 30px;
+    width: 120px;
+    height: 40px;
+    color: #fff;
+    background-color: rgb(163, 44, 45);
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bolder;
+}
+@media (max-width: 576px) {
+    .removeButton{
+        margin-top: 120px;
+      margin-left: 30px;
+      font-size: 14px;
+    }
+  }
+
+.trashIcon{
+    font-size: x-large;
+}
+
+/* 產品詳細:底線 */
+.orderProductBorder{
+    margin-top: 15px;
+    margin-left: -71px;
+    width: 1305px;
+    height: 20px;
+    border-bottom:solid 2px #B1B7B5 ;
+}
+@media (max-width: 576px) {
+    .orderProductBorder{
+      width: 315px;
+      margin-top: -10px;
+      margin-left:-72px;
+      font-size: 14px;
+    }
+  }
+
+.discount{
+    display: flex;
+}
+
+.discountTitle{
+    text-align: center;
+    margin-top: 120px;
+    color: rgb(102, 50, 4);
+    font-weight: bolder;
+}
+@media (max-width: 576px) {
+    .discountTitle{
+       display: none;
+    }
+  }
+
+
+/* 優惠加購:外層容器 */
+.discountContainer{
+    display: flex;
+    margin-left: 30px;
+}
+@media (max-width: 576px) {
+    .discountContainer{
+       display: none;
+    }
+  }
+
+/* 優惠加購:產品列容器 */
+.discountContent{
+   margin-left: 130px;
+   margin-top: 50px;
+}
+
+.leftArrow{
+    margin-top: 200px;
+    font-size: 50px;
+}
+
+.rightArrow{
+    margin-top: 200px;
+    margin-left: 240px;
+    font-size: 50px;
+}
+
+.discountSeller{
+   padding-top: 3px;
+   padding-left: 15px;
+   width: 150px;
+   height: 30px;
+   color: #fff;
+   background-color: rgb(163, 44, 45);
+   
+   
+}
+
+.discountProduct{
+    margin-top: 10px;
+    padding-top: 3px;
+    padding-left: 15px;
+    width: 120px;
+    height: 30px;
+    color: #fff;
+    background-color: rgb(163, 44, 45);
+
+}
+
+.discountPicture{
+    margin-top: 30px;
+    border-radius: 50%;
+}
+
+.discountPrice{
+    margin-top: 20px;
+    color: rgb(163, 44, 45);
+    font-weight: bolder;font-size: xx-large;
+}
+
+.priceAndCart{
+    display: flex;
+}
+
+.addToCart{
+    padding-top: 3px;
+    padding-left: 20px;
+    width: 150px;
+    height: 30px;
+    font-weight: bolder;
+    color: #fff;
+    background-color: rgb(163, 44, 45);
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.discountArrangement{
+    width: 1000px  ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.previousButton{
+  margin-top:50px; 
+  margin-bottom: 50px;
+  width: 150px;
+  height: 30px;
+  color:rgb(163, 44, 45);
+  background-color: #fff;
+  border-radius: 20px;
+  border:solid 2px;
+  font-weight: bolder;
+  text-align: center;
+}
+@media (max-width: 576px) {
+    .previousButton{
+        width: 128px;
+        height: 38px;
+      margin-top: 20px;
+      padding-top: 5px;
+    }
+  }
+
+
+.nextButton{
+  margin-top: 50px;  
+  margin-left: 40px ;
+  width: 150px;
+  height: 30px;
+  color:#fff ;
+  background-color: rgb(163, 44, 45);
+  border-radius: 20px;
+  font-weight: bolder;
+  text-align: center;
+}
+@media (max-width: 576px) {
+    .nextButton{
+        width: 128px;
+        height: 38px;
+      margin-top: 20px;
+      padding-top: 5px;
+    }
+  }
+
+/* orderStep2 */
+
+
+.step2BottomLine{
+     margin-top: 0px;
+     width: 1330px;
+     height: 20px;
+     background-color: #fff;
+     border-bottom: solid 2px #B1B7B5;
+}
+@media (max-width: 576px) {
+    .step2BottomLine{
+      width: 315px;
+      height: 1px;
+      margin-left: -45px;
+     
+    }
+  }
+
+/* 結算金額:容器 */
+.paymentContainer{
+    display: flex;
+    margin-left: 1000px;
+}
+@media (max-width: 576px) {
+    .paymentContainer{
+      margin-left: -10px;
+     
+    }
+  }
+
+
+.applyDiscount1{
+    margin-left: 30px;
+    color: rgb(177, 172, 172);
+}
+@media (max-width: 576px) {
+    .applyDiscount1{
+      margin-top: 35px;
+      margin-left: 15px;
+      font-size: 14px;
+    }
+  }
+
+  .applyDiscount2{
+    margin-left: 30px;
+    color: rgb(177, 172, 172);
+}
+@media (max-width: 576px) {
+    .applyDiscount2{
+      margin-top: 5px;
+      margin-left: 15px;
+      font-size: 14px;
+    }
+  }
+
+.buyText{
+    margin-left: 450px;
+    color: rgb(163, 44, 45);
+    font-weight: bolder;
+}
+@media (max-width: 576px) {
+    .buyText{    
+      font-size: 12px;
+      margin-left: 55px;
+      margin-top: 10px;
+    }
+  }
+
+.amountText{
+    margin-top: 50px;
+    margin-left: -50px;
+    font-weight: bolder;
+    font-size: 32px;
+}
+@media (max-width: 576px) {
+    .amountText{    
+      font-size: 13px;
+      margin-top: 10px;
+      margin-left: -20px;
+      font-weight: normal;
+    }
+  }
+
+.amount{
+    margin-top: 50px;
+    margin-left: 150px;
+    font-weight: bolder;
+    font-size: 32px;
+}
+@media (max-width: 576px) {
+    .amount{  
+      margin-top: 10px;
+      margin-left: 150px;  
+      font-size: 13px;
+      font-weight: normal;
+    }
+  }
+
+.discountText{
+    margin-top: 10px;
+    margin-left: -50px;
+    font-weight: bolder;
+    font-size: 32px;
+}
+@media (max-width: 576px) {
+    .discountText{    
+      font-size: 13px;
+      margin-top: 10px;
+      margin-left: -20px;
+      font-weight: normal;
+    }
+  }
+
+.discountAmount{
+    margin-top: 10px;
+    margin-left: 145px;
+    font-weight: bolder;
+    font-size: 32px;
+    color: #ff2828;
+}
+@media (max-width: 576px) {
+    .discountAmount{    
+        margin-top: 10px;
+        margin-left: 150px;  
+        font-size: 13px;
+        font-weight: normal;
+    }
+  }
+
+.pointText{
+    margin-top: 10px;
+    margin-left: -50px;
+    font-weight: bolder;
+    font-size: 32px;
+}
+@media (max-width: 576px) {
+    .pointText{    
+      font-size: 13px;
+      margin-top: 10px;
+      margin-left: -20px;
+      font-weight: normal;
+    }
+  }
+
+.usePoint{
+    width: 200px;
+    height: 38px;
+    margin-top: 15px;
+    margin-left: 30px;
+    padding-top: 2px;
+    font-weight: bolder;
+    font-size: 20px;
+    color: #fff;
+    background-color:rgb(163, 44, 45);
+    border-radius: 20px;
+    text-align: center;
+    border: none;
+}
+@media (max-width: 576px) {
+    .usePoint{   
+        width: 87px;
+        height: 22px; 
+        margin-top: 10px;
+        margin-left: 80px;  
+        padding-top: 2px;
+        font-size: 11px;
+        font-weight: normal;
+    }
+  }
+
+.sumText{
+    margin-top: 100px;
+    margin-left: 50px;
+    font-weight: bolder;
+    font-size: 64px;
+}
+@media (max-width: 576px) {
+    .sumText{    
+        margin-top: 10px;
+        margin-left: -30px;  
+        font-size: 16px;
+        font-weight: bolder;
+    }
+  }
+
+
+
+.sumTotal{
+    margin-top: 100px;
+    margin-left: 800px;
+    font-weight: bolder;
+    font-size: 64px;
+}
+@media (max-width: 576px) {
+    .sumTotal{    
+      font-size: 16px;
+      margin-top: 10px;
+      margin-left: 110px;
+      font-weight: bolder;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .SettlementLine{    
+     width: 329px;
+     height: 2px;
+     margin-left: -50px;
+     margin-top: 10px;
+
+     background-color: #ff2828;
+    }
+  }
+  
+
+.payment{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 80px;
+    padding-top: 5px;
+    text-align: center;
+    width: 220px;
+    height: 40px;
+    background-color: #fff;
+    border: solid 2px rgb(163, 44, 45);
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+@media (max-width: 576px) {
+    .payment{    
+     width: 248px;
+     height: 37px;
+     margin-top: 20px;
+     margin-left: 20px;
+     padding-top: 2px;
+     text-align: center;
+    }
+  }
+
+  .methodImage{
+    padding-left: 2px;
+  }
+
+.paymentText{
+    color:rgb(163, 44, 45);
+    font-weight: bolder;
+    margin-left: 70px;;
+}
+@media (max-width: 576px) {
+    .paymentText{    
+     padding-top: 2px;
+    }
+  }
+
+/* page3 */
+.darkOverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 黑色半透明背景 */
+    z-index: 999; /* 确保遮罩层位于所有元素之上 */
+}
+
+.content {
+    position: absolute; /* 使内容绝对定位，以免黑色背景覆盖内容 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 其他样式 */
+  }
+
+/* orderStep4 */
+.orderInformation1{
+    margin-top: 10px;
+    margin-left: 70px;
+    font-weight: bolder;
+    font-size: large;
+    margin-bottom: 20px;
+}
+
+.orderInformation2{
+    margin-top: 10px;
+    margin-right: 70px;
+    font-weight: bolder;
+    font-size: large;
+    margin-bottom: 20px;
+}
+
+.borderBottom{
+    margin-top: 10px;
+    border-bottom: solid 5px rgb(163, 44, 45) ;
+}
+
+.orderDetailText{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-left: 45px;
+}
+
+/* 彈窗:消耗遊戲點數 */
+
+.consumeContainer{
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+}
+
+.pointConsumeCross{
+    margin-top: 15px;
+    margin-left: 410px;
+    color: rgb(163, 44, 45);
+}
+
+.consumeButton{
+    width: 30px;
+    height: 30px;
+    margin-left: 3px;
+    padding-top: 3px;
+    padding-left: 10px;
+   font-weight: bolder;
+   background-color: rgb(225, 223, 223);
+}
+
+.wbButton{
+    text-align: center;
+    padding-top: 1px;
+    width: 100px;
+    height: 30px;
+    color: rgb(163, 44, 45);
+    background-color: #fff;
+    border:solid 2px rgb(163, 44, 45);
+    border-radius: 20px;
+    font-weight: bolder;
+    margin-top: -50px;
+}
+
+.rbButton{
+    text-align: center;
+    padding-top: 2px;
+    width: 100px;
+    height: 30px;
+    color: #fff;
+    background-color: rgb(163, 44, 45);
+    border-radius: 20px;
+    font-weight: bolder;
+    margin-top: -50px;
+}
+
+/* 彈窗:付款成功 */
+.paymentSuccessWidth{
+    max-width: 480px;
+}
+
+.paymentSuccessHeight{
+    height: 450px;
+}
+
+.paymentSuccessText{
+    font-size: 28px;
+    color: #A32C2D;
+    margin-top: 20px;
+    margin-left: 160px;
+    font-weight: bolder;
+}
+
+.paymentSuccessCross{
+    margin-top: -40px;
+    margin-left: 420px;
+    color: #A32C2D;
+    font-size: 22px;
+    font-weight: 100;
+}
+
+.successGreenFrame{
+    width: 101px;
+    height: 101px;
+    border:solid 8px #7BDB73;
+    margin-top: 45px;
+    margin-left: 168px;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 30px;
+}
+
+.successTickIcon{
+    font-size: 45px;
+    font-weight: 900;
+    color: #29A21E;
+}
+
+.successTextContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.successText{
+    font-size: 16px;
+    font-weight: 900;
+    color: #A32C2D;
+    margin-left: -15px;
+}
+
+.nextTextButton{
+    text-align: center;
+    padding-top: 7px;
+    width: 144px;
+    height: 38px;
+    color: #fff;
+    background-color: rgb(163, 44, 45);
+    border-radius: 20px;
+    font-weight: bolder;
+    margin-top: 40px;
+    margin-left: 158px;
+}
+
+
+/* 手風琴元件:箭頭Icon設定 */
+.accordion-button.collapsed::after {
+    color: red;
+}
+
+.accordion-button.collapsed::after {
+    right: calc(100% - 100px);
+}
+
+.customAccordionButton::after{
+   margin-left: -40px;
+   color: #A32C2D  !important; 
+}
+
+
+
+
+
+
+
+
+/* Order.module.css */
+.outerFrame11 {
+  width: 90%; /* 根据设计图调整宽度 */
+  margin: 0 auto; /* 居中显示 */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* 分隔線 */
+.orderDetailContainer {
+  background-color: #fff;
+  border: 2px solid #d1a073;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px; 
+}
+
+.orderTable {
+  width: 100%; /* 表格宽度 */
+  margin: 20px 0; /* 上下边距 */
+  border-collapse: collapse;
+}
+
+.orderTable th, .orderTable td {
+  border: 1px solid #d1a073;
+  padding: 10px;
+  text-align: left;
+  font-size: 18px; /* 增大字号 */
+  font-weight: bold; /* 字体加粗 */
+}
+
+.orderTable th {
+  background-color: #f8f8f8;
+}
+.orderFooter1 {
+  text-align: right;
+  font-size: 18px; /* 增大字号 */
+  font-weight: bold; /* 字体加粗 */
+  color: red; /* 总金额显示为红色 */
+}

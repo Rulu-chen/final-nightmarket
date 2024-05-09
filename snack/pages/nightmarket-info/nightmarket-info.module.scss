@@ -1,0 +1,79 @@
+.bannerAd {
+  width: 100%;
+  height: 140px;
+  margin-bottom: 40px;
+  object-fit: cover;
+  @media (max-width: 576px) {
+    margin-bottom: -40px;
+  }
+  .bannerImg {
+    width: 100%;
+    height: 130px;
+    @media (max-width: 576px) {
+      height: 80px;
+    }
+  }
+}
+
+.content {
+  margin-top: 40px;
+  margin-bottom: 150px;
+  padding-left: 80px;
+  padding-right: 80px;
+  @media (max-width: 576px) {
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .category {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 576px) {
+      margin-bottom: 20px;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+
+      .categoryCard {
+        flex: 0 0 50%; /* 讓元素的基本大小自動調整以適應內容 */
+        max-width: 50%; /* 設置元素的最大寬度為容器寬度的一半 */
+        min-width:50%; /* 設置元素的最小寬度為容器寬度的一半 */
+        
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  .shopsTitle {
+    margin-top: 40px;
+    margin-bottom: 14px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .shopCard {
+    margin-bottom: 14px;
+
+    @media (max-width: 576px) {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      margin-right: -20px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .col {
+        display: grid;
+        justify-content: center;
+        min-width: 320px;
+      }
+    }
+  }
+}

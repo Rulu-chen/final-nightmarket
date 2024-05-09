@@ -1,0 +1,1106 @@
+/* 產品列表頁 */
+.center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+   
+}
+.div{
+  max-width: 200px;
+}
+
+.container {
+    width: var(--container-width, 1742px);
+    height: var(--container-height, 3000px);
+
+   
+    /* background-color: var(--container-color, #D2B48C); */
+  }
+
+ 
+
+  /* 產品分類:外層容器 */
+  .content {
+    margin-top: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  @media (max-width: 576px) {
+    .content{
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    }
+  }
+
+  /* .category-item{
+    @media (max-width: 576px) {
+      width: 375px;
+    }
+  } */
+  .category {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+    @media (max-width: 576px) {
+      .category{
+       
+      margin-bottom: 20px;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      
+    }
+   }
+
+  .categoryContainer {
+   
+    overflow-x: hidden;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    text-align: center;
+    
+    
+  }
+
+   .categoryText{
+     font-size: 16px;
+     font-weight: bold;
+     margin-left: 55px;
+     margin-top: 3px;
+   }
+
+   @media(max-width:576px){ 
+    .categoryText{
+      font-size: 12px;
+    }
+   }
+  
+   .categoryPicInterval{
+     margin-top: 30px;
+     justify-content: space-between;
+     
+   }
+
+   @media(max-width:576px){ 
+    .categoryPicInterval{
+      margin-top: 10px;
+      margin-right: -50px;
+      
+    }
+  }
+
+  /* 產品分類:圖片設定 */
+  .categoryImage { 
+    border-radius: 20px;
+  }
+  @media(max-width:576px){ 
+    .categoryImage{
+      width: 66px;
+      height: 67px;   
+    }
+   }
+/* '篩選條件'按鈕 */
+   .filterConditionButton{
+    width: 150px;
+    height: 32px;
+    background-color: #A32C2D;
+    border-radius: 20px;
+    border: none;  
+    margin-left: 1550px;
+    margin-top: -2100px;
+   }
+
+   @media(max-width:576px){ 
+    .filterConditionButton{
+      width: 106px;
+      height: 26px;
+      padding-top: 3px;
+      padding-left: -10px;
+        text-align: center;
+      margin-right: 1400px;
+      margin-top: -2685px;
+    }
+   }
+
+  .filterConditionText{
+    font-size: 16px;
+    font-weight:500 ;
+    color: #fff;
+    margin-left: -5px;
+  }
+  @media(max-width:576px){ 
+    .filterConditionText{
+      font-size: 12px;
+      margin-left: -5px;
+    }
+   }
+
+
+
+
+
+  /* 人氣商品:外層容器 */
+
+  /* .pop-products{
+    @media (max-width: 576px) {
+      width: 375px;
+    }
+  } */
+  /*  */
+  .popularContainer {
+    margin-top: 50px;
+    display: flex;
+   
+  }
+  @media (max-width: 576px) {
+    .popularContainer {
+      margin-left: 0;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+    }
+  
+    .popularContainer::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .popularDisplay {
+    display: flex;
+  }
+  @media (max-width: 576px) {
+    .popularDisplay {
+      display: flex;
+      flex-direction: column;
+      width: 375px;
+    }
+    .popularContainer {
+      margin-left: 10px;
+    }
+  }
+
+  .popularIcon{
+     margin-bottom: 8px;
+  }
+
+  @media(max-width:576px){ 
+    .popularIcon{
+      width: 25px;
+      height: 35px;   
+    }
+   }
+
+  /* 人氣商品:圖片 文字設定 */
+  .popularProduct { 
+    margin-left:  0px;
+    font-weight: bolder;
+    color:rgb(0, 0, 0) ;
+    margin-right: 20px;
+  }
+  @media(max-width:576px){ 
+    .popularProduct{
+      margin-left:  -10px;
+      margin-top: -5px; 
+      display: flex;
+      flex-direction: column;
+      margin-right: 0px;
+    }
+   }
+
+  .bestSellerText{
+    font-size: 28px;
+    color:#A32C2D;
+    margin-bottom: 3px;
+    margin-left: 8px;
+    font-weight: bolder;
+    white-space: nowrap;
+  }
+
+  @media(max-width:576px){ 
+    .bestSellerText{
+      font-size: 16px; 
+    }
+   }
+
+   .popularImage{
+    width: 345;
+    height: 275px;;
+  } 
+  @media(max-width:576px){ 
+    .popularImage{
+      width: 306px;
+      height: 196px;
+    }
+   }
+
+   .bestSeller{
+    font-size: 16px;
+    font-weight: bolder;
+   }
+   @media(max-width:576px){ 
+    .bestSeller{
+      font-size: 12px;
+    }
+   }
+
+   .bestProduct{
+    font-size: 28px;
+    margin-top: -20px;
+    color: rgb(0,0,0) ;
+    font-weight: bolder;
+    white-space: nowrap;
+   }
+   @media(max-width:576px){ 
+    .bestProduct{
+      font-size: 16px;
+    }
+   }
+
+   .collectIcon{
+    font-weight: bolder;
+    font-size: 30px;
+    margin-top: -95px;
+    margin-left: 130px;
+    color: rgb(163, 44, 45);
+   }
+   @media(max-width:576px){ 
+    .collectIcon{
+      font-size: 16px;
+      margin-top: -10px;
+      margin-left: 10px;
+
+    }
+   }
+
+   .seeMoreButton{
+    width: 128px;
+    height: 38px;
+    border:solid 3px #A32C2D;
+    margin-top: -10px;
+    margin-left: 225px;
+    font-size: 16px;
+    border-radius: 20px;
+    color: #A32C2D;
+    background-color: #fff;
+    font-weight: bolder;
+   }
+   @media(max-width:576px){ 
+    .seeMoreButton{
+      width: 92px;
+      height: 27px;
+      border:solid 2px #A32C2D;
+      font-size: 12px;
+      margin-left: 210px;
+    }
+   }
+
+
+  /* .image{
+    flex: 1;
+    max-width: calc((100% - 10px) / 4); 
+    margin-right: 20px; 
+  }
+
+  .image:last-child {
+    margin-right: 0;
+  } */
+
+
+  .popularInfo {
+    display: flex;
+     align-items: center; 
+     margin-left: 5px;
+  }
+  @media(max-width:576px){ 
+    .popularInfo{
+     margin-left: 0;
+    }
+   }
+
+  .recommendOuter{
+    margin-top: 100px;
+    margin-left: -20px;
+  }
+  @media(max-width:576px){ 
+    .recommendOuter{
+     font-size: 16px;
+     margin-left: 720px;
+     margin-top: 10px;
+    }
+   }
+
+  .recommendContainer{
+    display: flex;
+    justify-content:left;
+  }
+  
+  /* 推薦餐點:最外層容器 */
+ .recommendProductContainer{
+  margin-left: 80px;
+  margin-top: 75px;
+  width: auto;
+  
+ }
+ @media(max-width:576px){ 
+  .recommendProductContainer{
+   
+   margin-left: 730px;
+   margin-top: 5px;
+  }
+ }
+
+ .recommendImage{
+  border-radius: 70px;
+  border:solid 8px #fff;
+  margin-top: 22px;
+  margin-left: -65px;
+ } 
+ @media(max-width:576px){ 
+  .recommendImage{
+   width: 239px;
+   height: 132px;
+   border:solid 4px #fff;
+   border-radius: 20px;
+  }
+ }
+ 
+ .recommendSize{
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  overflow-x: auto;
+ }
+
+ .productItemContainer{
+  margin-right:750px;
+  display: flex;
+ }
+
+
+  .recommendTitle{
+    margin-top: 90px;
+    margin-left: 60px;
+    font-size: 30px;
+    color:rgb(163, 44, 45);
+    font-weight: bolder;
+  }
+  @media(max-width:576px){ 
+    .recommendTitle{
+     font-size: 16px;
+     margin-left: 670px;
+    }
+   }
+
+  .recommendProduct{
+    font-weight: bolder;
+    font-size: 20px;
+  }
+  @media(max-width:576px){ 
+    .recommendProduct{
+     font-size: 16px;
+    }
+   }
+
+   .recommendInfo{
+    display: flex;
+    position: relative;
+   }
+
+  .recommendName{
+    margin-top: 4px;
+    margin-left: 15px;
+    font-weight: bolder;
+    font-size: 26px;
+  }
+  @media(max-width:576px){ 
+    .recommendName{
+     font-size: 16px;
+     margin-left: -50px;
+     margin-top: 15px;
+    }
+   }
+
+  .RecommendCollectIcon{
+    color: rgb(163, 44, 45);
+    font-size: 26px;
+    margin-top: 15px;
+    margin-left: 18px;
+  }
+  @media(max-width:576px){ 
+    .RecommendCollectIcon{
+      position: absolute;
+      left:10%;
+    margin-left: 30px;
+    align-items: center;
+    }
+   }
+
+  .productScore{
+    width: 53px;
+    height: 54px;
+    margin-top: 8px;
+    margin-left: 75px;
+    padding-top: 15px;
+    padding-left: 13px;
+    background-color: #E5E1DD;
+    border-radius: 50%;
+    padding-right: 8px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  @media(max-width:576px){ 
+    .productScore{
+      position: absolute;
+      left: 45%;
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+    padding-top: 12px;
+    padding-left: 10px;
+    margin-left: 50px;
+    }
+   }
+
+  .discountContainer{
+    margin-top: 20px;
+    margin-left: 90px;
+  }
+
+/* 互動視窗排版 */
+@media (max-width: 576px) {
+  .modal-dialog {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 !important; /* 清除 margin */
+    max-width: 100% !important; /* 設置最大寬度為螢幕寬度 */
+    width: 90% !important; /* 設置寬度為螢幕寬度的 90% */
+  }
+}
+
+
+
+  .filterModalSize{
+    width: 491px;
+    height: 436px;
+  }
+  @media(max-width:576px){ 
+    .filterModalSize{
+      width: 100%;
+      height: 378px;
+    }
+   }
+
+
+/* 產品篩選:手風琴元件容器 */
+.filterContainer{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 500px;
+  height: 280px;
+ }
+ @media(max-width:576px){ 
+  .filterContainer{
+    margin-left: -25px;
+  }
+ }
+
+
+
+  /* '產品篩選'彈窗 */
+  .paymentSize{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 500px;
+     transform: translate(-50%, -50%);
+  }
+  @media(max-width:576px){ 
+    .paymentSize{
+      width: 491px;
+      height: 436px;
+      border-radius: 20px 20px 0 0;
+      position: absolute;
+      top:79%;
+      left: 39%;
+    }
+   }
+
+   .custom-accordion{
+    border-radius: 20px;
+   }
+   
+/* 商品篩選:叉叉 */
+   .filterCross{
+    margin-top: 5px;
+    margin-left: 440px;
+     color: rgb(163, 44, 45);
+     font-size: 22px;
+     font-weight: 100;
+   }
+   @media(max-width:576px){ 
+    .filterCross{
+      margin-top: 15px;
+      margin-left: 340px;
+      font-size: 10px;
+    }
+   }
+
+
+  .filterTitle{
+    margin-top: 30px;
+    margin-left: 31px;
+     font-size: 20px;
+     font-weight: bolder;
+  }
+  @media(max-width:576px){ 
+    .filterTitle{
+      font-size: 16px;
+      font-weight: bolder;
+    }
+   }
+
+
+  .filterCircle{
+    width: 16px;
+    height: 16px;
+    color: #fff;
+    border:solid 4px #A32C2D;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-left: 15px;
+    font-weight: bolder;
+  }
+  @media(max-width:576px){ 
+    .filterCircle{
+      font-size: 16px;
+      font-weight: bolder;
+ 
+    }
+   }
+
+  .filterText{
+    font-size: 16px;
+    font-weight: bolder;
+    margin-top: 6px;
+    margin-left: 5px;
+  }
+  @media(max-width:576px){ 
+    .filterText{
+      font-size: 12px;
+      font-weight: bolder;
+      margin-top: 10px;
+    }
+   }
+
+   .filterButtonInterval{
+    display: flex;
+    margin-top: 40px;
+    margin-left: 160px;
+   }
+   @media(max-width:576px){ 
+    .filterButtonInterval{
+      margin-top: 25px;
+      margin-left: 90px;
+    }
+   }
+
+
+
+   .filterIcon{
+    font-size: 24px;
+    margin-left: 80px;
+    margin-top: -50px;
+   }
+
+   @media(max-width:576px){ 
+    .filterIcon{
+      font-size: 18px;
+      margin-left: 50px;
+      margin-top: -45px;
+    }
+   }
+
+   /* 手機版設定 */
+   @media(max-width:576px){ 
+    .modal-wrapper {
+      max-width: 359px; /* 根據你的設計需求調整 */
+      margin: 0 auto; /* 讓 modal 在小螢幕上水平置中 */
+  }
+   }
+
+   .modalLocation{
+    margin-left: 500px;
+    margin-top: 430px;
+   }
+   @media(max-width:576px){ 
+    .modalLocation{
+      margin-left: -20px;
+      margin-top: 20px;
+    }
+   }
+
+
+
+   .filterButton{
+    width: 92px;
+    height: 32px;
+    padding-top: 2px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center;
+    margin-top: -40px;
+   }
+   @media(max-width:576px){ 
+    .filterButton{
+      font-size: 12px;
+    }
+   }
+
+
+   
+   .discountSize{
+      margin-top: 480px;
+      margin-left: 48px;
+      position: relative;
+   }
+   @media(max-width:576px){ 
+    .discountSize{
+      display: none;
+    }
+   }
+ 
+
+  /* 產品列表:優惠資訊 */
+ .discountInformation{
+  width: 319px;
+  height: 314px;
+  border-radius: 20px;
+ }
+
+
+
+ /* 產品詳細頁 */
+
+ /* '產品詳細'外框 */
+ .detailContainer{
+  display:flex;
+  width:1518px;
+  height:726px;
+  border-radius:20px;
+  background-color: #fff;
+ }
+ @media(max-width:576px){ 
+  .detailContainer{
+    flex-direction: column;
+    width: 359px;
+    height: auto;
+    border-radius:0;
+    background-color: unset;
+  }
+ }
+
+ /* 產品詳細:手風琴元件設定 */
+ .detailModalSize{
+  margin-top: 50px;
+  margin-left: 150px;
+  border-radius: 20px;
+  max-width: 1536px;
+ }
+
+ 
+ /* 產品詳細:圖片設定 */
+ .detailPic{
+  border-radius: 20px 0 0 20px;  
+ 
+}
+@media(max-width:576px){ 
+  .detailPic{
+   margin-top: 70px;
+    width: 100%;
+    height: 258px;
+    border-radius: 0;
+  }
+ }
+
+ /* 產品詳細:文字排列方向 */
+ .detailTextArray{
+  display: flex;
+  flex-direction: column;
+ }
+ @media(max-width:576px){ 
+  .detailTextArray{
+    flex-direction: column;
+ }
+}
+
+/* 產品詳細:叉叉Icon */
+.detailCrossIcon{
+  color:#A32C2D;
+  font-size: 28px;
+  font-weight: bolder;
+  margin-top: 20px;
+  margin-left: 700px;
+}
+@media(max-width:576px){ 
+  .detailCrossIcon{
+    margin-top: 10px;
+ }
+}
+
+/* 產品詳細:店家名稱 */
+.detailSeller{
+  width: 150px;
+  height: 35px;
+  color: #fff;
+  background-color: #A32C2D;
+  margin-top: 50px;
+  margin-left: 100px;
+  padding-top: 3px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+@media(max-width:576px){ 
+  .detailSeller{
+    width: 138px;
+    height: 29px;
+   margin-top: -390px;
+   margin-left: 10px;
+   padding-top: 1px;
+   font-size: 18px;
+ 
+ }
+}
+
+/* 產品詳細:商品名稱 */
+.detailProductName{
+  width: 110px;
+  height: 35px;
+  color: #fff;
+  background-color: #A32C2D;
+  margin-top: 10px;
+  margin-left: 100px;
+  padding-top: 3px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+@media(max-width:576px){ 
+  .detailProductName{
+   width: 82px;
+   height: 29px;
+   margin-top: 5px;
+   margin-left: 10px;
+   font-size: 18px;
+   padding-top: 2px;
+ }
+}
+
+/* 產品詳細:商品描述 */
+.detailIntroduce{
+  width: 421px;
+  margin-top: 15px;
+  margin-left: 115px;
+  font-weight: bold;
+  font-size: 16px;
+}
+@media(max-width:576px){ 
+  .detailIntroduce{
+   width: 303px;
+  margin-top: 220px;
+  margin-left: 25px;
+  font-size: 12px;
+  font-weight: 500;
+ }
+}
+
+/* 產品詳細:商品價格 */
+.detailPrice{
+  font-size: 28px;
+  color: #A32C2D;
+  margin-top: 20px;
+  margin-left: 115px;
+}
+@media(max-width:576px){ 
+  .detailPrice{
+  margin-top: 10px;
+  margin-left: 25px;
+  font-size: 18px;
+  font-weight: 500;
+ }
+}
+
+/* 產品數量:容器 */
+.detailNumber{
+  display: flex;
+  margin-top: 10px;
+  margin-left: 115px;
+}
+@media(max-width:576px){ 
+  .detailNumber{
+  margin-top: -30px;
+  margin-left: 245px;
+  font-size: 18px;
+  font-weight: 500;
+ }
+}
+
+/* 產品數量:- +按鈕 */
+.detailNumberButton{
+  width: 37px;
+  height: 37px;
+  color: #000;
+  background-color: #E5E1DD;
+  border:none;
+  margin-left: 3px;
+  font-size: 26px;
+}
+@media(max-width:576px){ 
+  .detailNumberButton{
+  width: 24px;
+  height: 23px;
+  padding-top: 3px;
+  color: #A32C2D;
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: bolder;
+ }
+}
+
+/* 產品數量:數量顯示 */
+.detailNumberShow{
+  width: 37px;
+  height: 37px;
+  color: #000;
+  background-color: #E5E1DD;
+  border:none;
+  margin-left: 3px;
+  padding-top: 8px;
+  padding-left: 15px;
+  font-size: 16px;
+}
+@media(max-width:576px){ 
+  .detailNumberShow{
+  width: 24px;
+  height: 23px;
+  padding-top: 3px;padding-left: 8px;
+  color: #A32C2D;
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: bolder;
+ }
+}
+
+.detailHeartIcon{
+  font-size: 30px;
+  color: #A32C2D;
+}
+@media(max-width:576px){ 
+  .detailHeartIcon{
+  display: none;
+   
+ }
+}
+
+/* 右上角收藏圖案 */
+.detailProductCollect{
+    display: none;
+}
+@media(max-width:576px){ 
+  .detailProductCollect{
+   display: flex;
+   /*
+  font-size: 30px;
+  color: #A32C2D;
+  margin-left: 300px;
+  margin-top: -265px; */
+ }
+}
+
+.addCartButton{
+  width: 140px;
+  height: 32px;
+  font-size: 16px;
+  color: #A32C2D;
+  background-color: #fff;
+  border-radius: 20px;
+  border: solid 2px #A32C2D;
+  margin-left: 28px;
+}
+@media(max-width:576px){ 
+  .addCartButton{
+  width: 120px;
+  height: 26px;
+   font-size: 12px;
+   margin-left: -25px;
+ }
+}
+
+.immediateBuyButton{
+  width: 124px;
+  height: 32px;
+  font-size: 16px;
+  color:#fff;
+  background-color: #A32C2D;
+  border-radius: 20px;
+  border:none;
+  margin-left: 12px;
+}
+@media(max-width:576px){ 
+  .immediateBuyButton{
+  width: 108px;
+  height: 26px;
+   font-size: 12px;
+ }
+}
+
+/* 產品詳細:虛線 */
+.detailDashed{
+  width: 578px;
+  margin-top: 32px;
+  margin-left: 110px;
+  border: dashed 1px #000;
+}
+@media(max-width:576px){ 
+  .detailDashed{
+  width: 356px;
+  margin-top: 20px;
+  border: solid 1px #B1B7B5;
+  margin-left: 2px;
+ }
+}
+
+.ingredientText{
+  display: none;
+}
+@media(max-width:576px){ 
+  .ingredientText{
+  display: flex;
+  font-size: 12px;
+  margin-top: 14px;
+  margin-left: 28px;
+  font-weight: bold;
+ }
+}
+
+.detailIngredient{
+  margin-top: 15px;
+  margin-left: 115px;
+  font-weight: bold;
+}
+@media(max-width:576px){ 
+  .detailIngredient{
+  font-size: 12px;
+  margin-top: 10px;
+  margin-left: 28px;
+ }
+}
+
+.ingredientDown1{
+  display: none;
+}
+@media(max-width:576px){ 
+  .ingredientDown1{
+    display: flex;
+  font-size: 20px;
+  margin-top: -45px;
+  margin-left: 320px;
+ }
+}
+
+.detailSolid{
+  width: 578px;
+  margin-top: 16px;
+  margin-left: 110px;
+  border-bottom: solid 2px #E5E1DD ;
+}
+@media(max-width:576px){ 
+  .detailSolid{
+  width: 356px;
+  margin-top: 40px;
+  border: solid 1px #B1B7B5;
+  margin-left: 2px;
+ }
+}
+
+/* 營養成分表:文字 */
+.nutritionIngredient{
+  margin-top: 14px;
+  margin-left: 115px;
+  font-size: 16px;
+  font-weight: bold;
+}
+@media(max-width:576px){ 
+  .nutritionIngredient{
+  font-size: 18px;
+  margin-top: 10px;
+  margin-left: 28px;
+ }
+}
+
+.ingredientDown2{
+  margin-top: -20px;
+  margin-left: 650px;
+  font-size: 30px;
+}
+@media(max-width:576px){ 
+  .ingredientDown2{
+  margin-top: -25px;
+  margin-left: 320px;
+  font-size: 20px;
+  transform: rotate(180deg);
+ }
+}
+
+
+/* 按鈕(未修改) */
+.wbButton{
+  color: #A32C2D;
+  background-color: #fff;
+  font-weight: bolder;
+  border:solid 2px #A32C2D;
+  border-radius: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.rbButton{
+color: #fff;
+background-color: #A32C2D;
+font-weight: bolder;
+border-radius: 20px;
+justify-content: center;
+text-align: center;
+border: none;
+}
+
+.bbButton{
+color: #fff;
+background-color: rgb(0, 0, 0);
+border-radius: 20px;
+justify-content: center;
+text-align: center;
+border: none;
+}
+
+.gbButton{
+width: 37px;
+height: 37px;
+text-align: center;
+margin-left: 1px;
+background-color: #E5E1DD;
+border: none;
+}
